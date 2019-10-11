@@ -1,0 +1,88 @@
+Help from
+https://www.youtube.com/watch?v=zJ6WbK9zFpI&list=PLmoZy395oOmspu7qmUV3yF_zxrdArllEz&index=8&t=1258s
+
+Docker Installation:
+go to-
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+or
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1
+
+Check Prerequisites .
+
+Uninstall old versions
+Older versions of Docker were called docker, docker.io , or docker-engine. If these are installed, uninstall them:
+
+$ sudo apt-get remove docker docker-engine docker.io containerd runc
+
+It’s OK if apt-get reports that none of these packages are installed.
+
+
+Install by-
+
+Install using the convenience script
+
+Docker provides convenience scripts at get.docker.com and test.docker.com for installing edge and testing versions of Docker Engine - Community into development environments quickly and non-interactively. The source code for the scripts is in the docker-install repository. Using these scripts is not recommended for production environments, and you should understand the potential risks before you use them:
+
+The scripts require root or sudo privileges to run. Therefore, you should carefully examine and audit the scripts before running them.
+The scripts attempt to detect your Linux distribution and version and configure your package management system for you. In addition, 
+the scripts do not allow you to customize any installation parameters. This may lead to an unsupported configuration, either from Docker’s point 
+of view or from your own organization’s guidelines and standards.
+The scripts install all dependencies and recommendations of the package manager without asking for confirmation. This may install a large number
+ of packages, depending on the current configuration of your host machine.
+The script does not provide options to specify which version of Docker to install, and installs the latest version that is released in the “edge”
+ channel.
+Do not use the convenience script if Docker has already been installed on the host machine using another mechanism.
+This example uses the script at get.docker.com to install the latest release of Docker Engine - Community on Linux. To install the latest testing
+ version, use test.docker.com instead. In each of the commands below, replace each occurrence of get with test.
+
+Warning: Always examine scripts downloaded from the internet before running them locally.
+
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+
+<output truncated>
+If you would like to use Docker as a non-root user, you should now consider adding your user to the “docker” group with something like:
+
+  sudo usermod -aG docker your-user
+Remember to log out and back in for this to take effect!
+
+test by 
+$ sudo docker run docker/whalesay cowsay "Hellow World"
+
+Next steps
+Continue to Post-installation steps for Linux
+
+
+Docker Commands	:
+
+Serial No-	
+Command text	
+action
+
+1 
+$ docker Run "(container name)"	
+start a container from an image.
+
+
+2
+$ docker ps
+list running containers and some basic info
+
+3
+$ docker ps -a
+list running containers and previously existed and some basic info
+
+4
+$ docker STOP "container name or ID"
+stop a container 
+
+5
+$ docker Rm "container name "
+Remove a container permanently or Delete a container permanently (images will not be deleated)
+
+6
+$ docker images
+Shows images list and size
+
+			
+	
